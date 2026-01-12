@@ -1,0 +1,29 @@
+body, html, #root {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e9ecef;
+  color: #0d6efd !important;
+  transition: 0.2s;
+}
+
+
+.sidebar .nav-link.active,
+.sidebar .nav-link.bg-primary {
+  background-color: #0d6efd !important;
+  color: white !important;
+}

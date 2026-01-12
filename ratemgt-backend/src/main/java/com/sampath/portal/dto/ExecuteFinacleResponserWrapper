@@ -1,0 +1,16 @@
+package com.sampath.portal.dto;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class ExecuteFinacleResponseWrapper {
+
+    // We tell Jackson to expect multiple <RTLIST> elements, not wrapped inside another tag
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "RTLIST")
+    private List<RateListDTO> rtlists;
+}
